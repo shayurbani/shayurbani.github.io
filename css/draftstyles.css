@@ -1,0 +1,324 @@
+/*
+Main Styles CSS file is used for all the general characteristics of all the Suffering html files.
+If I ever want to create other CSS files that touch a very specific html page I can create it
+and save it inside the CSS folder.
+
+REMINDER: CSS files are referenced or called by the HTML files by adding a link to the CSS files
+inside the head of the html file.
+*/
+
+
+/***********************************************************
+************************************************************
+Author: Shay Urbani
+Author website: [talk with miguel about this]
+Version: v1
+************************************************************
+***********************************************************/
+
+/***********************************
+COLORS
+
+Palette
+#000000 - black
+#FFFFFF - white
+#80176f - purple color
+#E2E4E7 - light grey
+
+Colors Applied
+#000000 (black):  text - blockquotes - captions - links - title - summary
+#173a80 (navy blue)  - noun project police logo
+#80176f (purple color) - links on hover -
+#FFFFFF (white) - body background
+***********************************/
+
+/***********************************
+LINKS
+
+a (standard):   #000000 - black (text decoration: underline)
+a (hover):      #80176f - purple color (text decoration: underline)
+***********************************/
+
+/******************************************
+FONTS
+
+This is the HTML link I will embed
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif|Montserrat:300,700" rel="stylesheet">
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Droid Serif', serif;
+
+Pairings, weights and sizes
+- Header h1 (title): 'Montserrat', sans-serif; font-size: 44px; font-weight: 700; line-height: ??? (1.3);
+- Header h2 (summary): 'Droid Serif', serif; font-size: 18px; font-weight: 400; line-height: ??? (1.3);
+- Header h3 (byline): 'Montserrat', sans-serif; font-size: 16px; font-weight: 300;
+- Header h4 (date): 'Montserrat', sans-serif; font-size: 16px; font-weight: 300;
+- Subtitle (h2): 'Montserrat', sans-serif; font-size: 26px; font-weight: 700;
+- Body text: 'Droid Serif', serif; font-size: 18px; font-weight: 400; line-height: ??? (1.5);
+- Blockquotes: 'Montserrat', sans-serif; font-size: 30px; font-weight: inherit; line-height: inherit;
+- Figcaptions: 'Droid Serif', serif; font-size: inherits; font-weight: inherit; line-height: ??? (1.1);
+********************************************/
+
+/********************************************
+TABLE OF CONTENTS
+1. Global styles (things that apply to all elements of site: general display, general margin, general font)
+2. Header & Nav styles (specific to header and nav)
+3. Main body Content (headings, images and figures, blockquotes)
+4. Footer Content
+5. Media Queries
+**********************************************/
+
+/******************************************************
+*******************************************************
+1. Global styles
+(things that apply to all elements of site)
+*******************************************************
+******************************************************/
+/*Make everything inside the <html> act as a block.
+box-sizing: used to tell the browser what the sizing properties (width and height) should include.
+border-box: The width and height properties (and min/max properties) includes content, padding and border, but not the margin */
+html {
+  box-sizing: border-box;
+}
+/* The asterisk * used below means wildcard or affect everything.
+box-sizing: inherit, means inherit the property border-box from its parent element html.
+Check what the pseudo elements :before and :after are for https://www.w3schools.com/CSS/css_pseudo_elements.asp */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*rules for all the body text
+you can give specific text elements their own rules by adding a
+selector { property: value;} When you do, you override this global rule*/
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: 'Droid Serif', serif; /* font */
+  font-size: 20px; /* 16px is the standard font size */
+  line-height: 1.5; /* 1.5 times the size of the font */
+  background-color: #FFFFFF;
+}
+/******************************************************
+*******************************************************
+2. Header styles (specific to header)
+*******************************************************
+******************************************************/
+
+header {
+  background-image: url('https://i.imgur.com/faJbP7f.jpg?1');
+  background-color: #E2E4E7; /*light grey*/
+  /* If you wanted you could add a
+    background-image. For this you can type, before background-color the property and value
+    background-image:url("insert here th url of the image");  */
+  background-size: cover; /* Means cover the entire element. Examples
+https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover */
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  text-align: center; /* NOT SURE ABOUT THIS*/
+  padding: 20px;  /* NOT SURE ABOUT THIS*/
+}
+
+/*header h1 story title*/
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 0% 5% .05% 70%;/*70px 40px 20px 700px; Top, right, bottom, left */
+}
+/*header h2 lead*/
+.summary {
+  font-family: 'Droid Serif', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 1% 5% 1% 70%;/* Top and bottom 0px of padding, right and left 20px of padding*/
+  /*margin: 0px 60px;/* Top and bottom 0px of margin, right and left 60px of margin*/
+}
+/*header h3 byline*/
+.author {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 1% 5% 3% 70%;
+}
+
+/*header h3 date*/
+.date {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 3% 5% 0% 70%;
+}
+
+/*header h3 a byline link*/
+.author a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.author {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 1% 5% 3% 70%;
+}
+
+
+/*header h3 a:hover byline link on hover*/
+.author a:hover {
+  text-decoration: underline;
+  text-decoration-color: #DDDDDD;
+}
+/* Wondering what a bunch of selectors are doing together?
+Selectors can be combined and will behave according to the syntaxis you used to combine them.
+.author a means select all <a> elements inside <h3> elements that are inside the <header> element
+.author a:hover means select all <a:hover> elements inside <h3> elements that are inside the <header> element
+A easy rule: the selector at the far right is the one that will be activated.
+Here is a list with examples: https://www.w3schools.com/cssref/css_selectors.asp */
+
+/****************************************************
+*****************************************************
+3. Main body content
+(headings, images and figures, blockquotes)
+*****************************************************
+*****************************************************/
+
+/* make all the article content act as a block with a max width and padding on every side*/
+article {
+  max-width: 800px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/*Give styling to body headings, links, figure, figcaptions, imgs and text*/
+
+h2 /*subtitles*/ {
+  font-family: 'Monsterrat', sans-serif;
+  font-size: 24px;
+}
+
+a /*links*/ {
+  color: #000000;
+  text-decoration: underline;
+}
+
+a:hover /*links on hover*/ {
+  text-decoration: underline;
+  text-decoration-color: #80176f;
+  color: #80176f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {  /*treat figure and what is inside it as a block*/
+  display: block;
+  margin: 0px;
+}
+
+figcaption {
+  font-size: 14px;
+  text-align: center;
+}
+
+/*div container for the 3 images and captions using the flex model, check it out after*/
+.img-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img-wrapper figure {width: 200px;} /*give the figure inside the div container a width of 200px*/
+/*end div container for the 3 images and captions*/
+
+
+blockquote{
+  border-top: 7px solid #000000; /* give the border top a solid line of 6px in color red wine*/
+  border-bottom: 4px solid #000000; /* give the border bottom a solid line of 3px in color red wine*/
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  padding: 5px 1px;
+  text-align: center;
+}
+
+/****************************************************
+*****************************************************
+4. Footer Content
+*****************************************************
+*****************************************************/
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: ##000000; /*light grey*/
+  /* IN CASE YOU WANT IT AGAIN background-size: cover; /* Means cover the entire element. Examples
+https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover */
+  color: #FFFFFF;
+  text-align: center; /* align all text inside header to the center*/
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/****************************************************
+*****************************************************
+5. Mediaqueries
+*****************************************************
+*****************************************************/
+
+/* A REMINDER
+You say for any @media that has less than XXXXX px then apply this rules...
+And the rules are basically a repetition of what you have above but with other sizes and styles.*/
+
+
+@media (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+
+    .title {
+      font-size: 40px;
+      text-align: center;
+      padding: 10px;
+      color: #FFFFFF;
+    }
+
+    /*header h2 lead smaller */
+    .summary {
+      font-size: 16px;
+      padding: 10px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    /*header h3 byline*/
+    .author {
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+      color: #FFFFFF;
+    }
+
+
+    /*header h3 a byline link*/
+    .author a {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    .date {
+      font-size: 12px;
+      padding: 10px;
+      color: #FFFFFF;
+    }
+
+    /*div container for the 3 images and captions using the flex model, aligned vertically*/
+    .img-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+}
