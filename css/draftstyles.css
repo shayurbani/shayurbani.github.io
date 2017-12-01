@@ -124,6 +124,7 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&pre
   font-size: 44px;
   font-weight: 700;
   line-height: 1.3;
+  color: #FFFFFF;
   padding: 0% 5% .05% 70%;/*70px 40px 20px 700px; Top, right, bottom, left */
 }
 /*header h2 lead*/
@@ -153,7 +154,7 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&pre
 
 /*header h3 a byline link*/
 .author a {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
