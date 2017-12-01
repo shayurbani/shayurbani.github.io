@@ -317,6 +317,7 @@ And the rules are basically a repetition of what you have above but with other s
       font-size: 12px;
       padding: 10px;
       color: #FFFFFF;
+      text-align: center;
     }
 
     /*div container for the 3 images and captions using the flex model, aligned vertically*/
