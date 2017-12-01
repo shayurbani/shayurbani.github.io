@@ -115,8 +115,8 @@ header {
 https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&preval=cover */
   color: #000000;
   font-family: "Montserrat", sans-serif;
-  text-align: center; /* NOT SURE ABOUT THIS*/
-  padding: 20px;  /* NOT SURE ABOUT THIS*/
+  text-align: left; /* NOT SURE ABOUT THIS*/
+  padding: 10px;  /* NOT SURE ABOUT THIS*/
 }
 
 /*header h1 story title*/
