@@ -173,7 +173,7 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-size&pre
 /*header h3 a:hover byline link on hover*/
 .author a:hover {
   text-decoration: underline;
-  text-decoration-color: #DDDDDD;
+  text-decoration-color: #FFFFFF;
 }
 /* Wondering what a bunch of selectors are doing together?
 Selectors can be combined and will behave according to the syntaxis you used to combine them.
